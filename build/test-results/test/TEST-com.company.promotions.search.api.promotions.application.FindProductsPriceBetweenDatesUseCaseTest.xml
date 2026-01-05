@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.company.promotions.search.api.promotions.application.FindProductsPriceBetweenDatesUseCaseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-01-05T11:11:10.237Z" hostname="user-HP-Laptop-15-da0xxx" time="0.548">
+  <properties/>
+  <testcase name="Should map all fields correctly to DTO" classname="com.company.promotions.search.api.promotions.application.FindProductsPriceBetweenDatesUseCaseTest" time="0.478"/>
+  <testcase name="Should return the only applicable price" classname="com.company.promotions.search.api.promotions.application.FindProductsPriceBetweenDatesUseCaseTest" time="0.013"/>
+  <testcase name="Should call repository with correct parameters" classname="com.company.promotions.search.api.promotions.application.FindProductsPriceBetweenDatesUseCaseTest" time="0.032"/>
+  <testcase name="Should return empty when no prices found" classname="com.company.promotions.search.api.promotions.application.FindProductsPriceBetweenDatesUseCaseTest" time="0.008"/>
+  <testcase name="Should return price with smallest date range when multiple prices apply" classname="com.company.promotions.search.api.promotions.application.FindProductsPriceBetweenDatesUseCaseTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

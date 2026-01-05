@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - FindProductsPriceGETControllerIT</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>FindProductsPriceGETControllerIT</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.company.promotions.search.api.promotions.infrastructure.rest.html">com.company.promotions.search.api.promotions.infrastructure.rest</a> &gt; FindProductsPriceGETControllerIT</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">12</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.097s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should accept second API key for rotation support</td>
+<td class="success">shouldAcceptSecondApiKeyForRotation()</td>
+<td class="success">0.038s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return 400 when brandId is invalid</td>
+<td class="success">shouldReturn400WhenBrandIdIsInvalid()</td>
+<td class="success">0.076s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return 400 when productId is invalid</td>
+<td class="success">shouldReturn400WhenProductIdIsInvalid()</td>
+<td class="success">0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return 401 when API key is invalid</td>
+<td class="success">shouldReturn401WhenApiKeyIsInvalid()</td>
+<td class="success">0.036s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return 401 when API key is missing</td>
+<td class="success">shouldReturn401WhenApiKeyIsMissing()</td>
+<td class="success">0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return 404 when no price applies</td>
+<td class="success">shouldReturn404WhenNoPriceApplies()</td>
+<td class="success">0.030s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 1: Request at 10:00 on day 14 - should return base price</td>
+<td class="success">shouldReturnBasePriceAt10OnDay14()</td>
+<td class="success">0.040s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 3: Request at 21:00 on day 14 - should return base price</td>
+<td class="success">shouldReturnBasePriceAt21OnDay14()</td>
+<td class="success">0.632s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return correct date range in response</td>
+<td class="success">shouldReturnCorrectDateRangeInResponse()</td>
+<td class="success">0.052s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 5: Request at 21:00 on day 16 - should return late promotional price</td>
+<td class="success">shouldReturnLatePriceAt21OnDay16()</td>
+<td class="success">0.053s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 4: Request at 10:00 on day 15 - should return promotional price</td>
+<td class="success">shouldReturnPromotionalPriceAt10OnDay15()</td>
+<td class="success">0.037s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 2: Request at 16:00 on day 14 - should return promotional price</td>
+<td class="success">shouldReturnPromotionalPriceAt16OnDay14()</td>
+<td class="success">0.040s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre id="class-stdout">2026-01-05T12:11:11.706+01:00  INFO 4013162 --- [api-test] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.company.promotions.search.api.promotions.infrastructure.rest.FindProductsPriceGETControllerIT]: FindProductsPriceGETControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05T12:11:11.786+01:00  INFO 4013162 --- [api-test] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.company.promotions.search.api.ApiApplication for test class com.company.promotions.search.api.promotions.infrastructure.rest.FindProductsPriceGETControllerIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.1)
+
+2026-01-05T12:11:11.941+01:00  INFO 4013162 --- [api-test] [    Test worker] a.p.i.r.FindProductsPriceGETControllerIT : Starting FindProductsPriceGETControllerIT using Java 21.0.9 with PID 4013162 (started by user in /home/user/inditex/promotions-api)
+2026-01-05T12:11:11.942+01:00  INFO 4013162 --- [api-test] [    Test worker] a.p.i.r.FindProductsPriceGETControllerIT : The following 1 profile is active: &quot;test&quot;
+2026-01-05T12:11:12.854+01:00  INFO 4013162 --- [api-test] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-05T12:11:12.894+01:00  INFO 4013162 --- [api-test] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2026-01-05T12:11:13.273+01:00  INFO 4013162 --- [api-test] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-05T12:11:13.378+01:00  INFO 4013162 --- [api-test] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-05T12:11:13.381+01:00  INFO 4013162 --- [api-test] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-01-05T12:11:13.384+01:00  INFO 4013162 --- [api-test] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2026-01-05T12:11:13.384+01:00  INFO 4013162 --- [api-test] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-01-05T12:11:13.386+01:00  INFO 4013162 --- [api-test] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:testdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-05T12:11:13.476+01:00  INFO 4013162 --- [api-test] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists promotions.prices cascade 
+Hibernate: create table promotions.prices (currency varchar(3) not null, price numeric(10,2) not null, price_list integer not null, priority integer not null, brand_id bigint not null, end_date timestamp(6) not null, id bigint generated by default as identity, product_id bigint not null, start_date timestamp(6) not null, primary key (id))
+2026-01-05T12:11:13.485+01:00  INFO 4013162 --- [api-test] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-05T12:11:13.693+01:00  WARN 4013162 --- [api-test] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-05T12:11:13.791+01:00  WARN 4013162 --- [api-test] [    Test worker] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 87f1e5b4-c45f-437b-9a68-e6042a214333
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-05T12:11:13.794+01:00  INFO 4013162 --- [api-test] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-05T12:11:14.459+01:00  INFO 4013162 --- [api-test] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-01-05T12:11:14.460+01:00  INFO 4013162 --- [api-test] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-01-05T12:11:14.467+01:00  INFO 4013162 --- [api-test] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2026-01-05T12:11:14.538+01:00  INFO 4013162 --- [api-test] [    Test worker] a.p.i.r.FindProductsPriceGETControllerIT : Started FindProductsPriceGETControllerIT in 2.741 seconds (process running for 19.019)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.2.1</a> at Jan 5, 2026, 12:11:15 PM</p>
+</div>
+</div>
+</body>
+</html>

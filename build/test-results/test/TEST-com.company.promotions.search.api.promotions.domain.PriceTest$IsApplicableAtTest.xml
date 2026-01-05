@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="isApplicableAt" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-01-05T11:11:10.793Z" hostname="user-HP-Laptop-15-da0xxx" time="0.034">
+  <properties/>
+  <testcase name="Should return false when date is before range" classname="com.company.promotions.search.api.promotions.domain.PriceTest$IsApplicableAtTest" time="0.003"/>
+  <testcase name="Should return false when date is after range" classname="com.company.promotions.search.api.promotions.domain.PriceTest$IsApplicableAtTest" time="0.002"/>
+  <testcase name="Should return true when date is at end of range" classname="com.company.promotions.search.api.promotions.domain.PriceTest$IsApplicableAtTest" time="0.006"/>
+  <testcase name="Should return true when date is within range" classname="com.company.promotions.search.api.promotions.domain.PriceTest$IsApplicableAtTest" time="0.002"/>
+  <testcase name="Should return true when date is at start of range" classname="com.company.promotions.search.api.promotions.domain.PriceTest$IsApplicableAtTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

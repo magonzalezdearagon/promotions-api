@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PriceRepositoryImplIT</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PriceRepositoryImplIT</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.company.promotions.search.api.promotions.infrastructure.persistence.html">com.company.promotions.search.api.promotions.infrastructure.persistence</a> &gt; PriceRepositoryImplIT</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.558s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should return all prices for a product and brand</td>
+<td class="success">shouldReturnAllPricesForProductAndBrand()</td>
+<td class="success">0.104s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 1: Request at 10:00 on day 14 for product 35455, brand 1 (ZARA)</td>
+<td class="success">shouldReturnBasePriceAt10OnDay14()</td>
+<td class="success">0.081s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 3: Request at 21:00 on day 14 for product 35455, brand 1 (ZARA)</td>
+<td class="success">shouldReturnBasePriceAt21OnDay14()</td>
+<td class="success">0.096s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return empty for non-existent product</td>
+<td class="success">shouldReturnEmptyForNonExistentProduct()</td>
+<td class="success">0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return empty when no price applies</td>
+<td class="success">shouldReturnEmptyWhenNoPriceApplies()</td>
+<td class="success">0.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 5: Request at 21:00 on day 16 for product 35455, brand 1 (ZARA)</td>
+<td class="success">shouldReturnLatePriceAt21OnDay16()</td>
+<td class="success">0.030s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return multiple applicable prices ordered by priority descending</td>
+<td class="success">shouldReturnMultipleApplicablePricesOrderedByPriority()</td>
+<td class="success">0.115s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 4: Request at 10:00 on day 15 for product 35455, brand 1 (ZARA)</td>
+<td class="success">shouldReturnPromotionalPriceAt10OnDay15()</td>
+<td class="success">0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test 2: Request at 16:00 on day 14 for product 35455, brand 1 (ZARA)</td>
+<td class="success">shouldReturnPromotionalPriceAt16OnDay14()</td>
+<td class="success">0.035s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre id="class-stdout">2026-01-05T12:11:10.887+01:00  INFO 4013162 --- [api-test] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.company.promotions.search.api.promotions.infrastructure.persistence.PriceRepositoryImplIT]: PriceRepositoryImplIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05T12:11:11.044+01:00  INFO 4013162 --- [api-test] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.company.promotions.search.api.ApiApplication for test class com.company.promotions.search.api.promotions.infrastructure.persistence.PriceRepositoryImplIT
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=?
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: insert into promotions.prices (brand_id,currency,end_date,price,price_list,priority,product_id,start_date,id) values (?,?,?,?,?,?,?,?,default)
+Hibernate: select pe1_0.id,pe1_0.brand_id,pe1_0.currency,pe1_0.end_date,pe1_0.price,pe1_0.price_list,pe1_0.priority,pe1_0.product_id,pe1_0.start_date from promotions.prices pe1_0 where pe1_0.product_id=? and pe1_0.brand_id=? and ? between pe1_0.start_date and pe1_0.end_date order by pe1_0.priority desc
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.2.1</a> at Jan 5, 2026, 12:11:15 PM</p>
+</div>
+</div>
+</body>
+</html>
