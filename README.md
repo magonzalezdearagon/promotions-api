@@ -89,9 +89,11 @@ curl -H "X-API-Key: default-dev-key-1" \
 ./gradlew test
 ```
 
-### Postman Tests
+These tests use MockMvc to test the full application stack (controller, security, service, repository, H2 database) without starting a real HTTP server.
 
-The `postman/` directory contains a Postman collection with integration tests.
+### End-to-End Tests (E2E)
+
+The `postman/` directory contains a Postman collection with true end-to-end tests that make real HTTP requests against the running application.
 
 **Using Postman GUI:**
 
@@ -107,13 +109,14 @@ The `postman/` directory contains a Postman collection with integration tests.
 npm install -g newman
 ```
 
-2. Start the application:
+2. Run the E2E tests (starts app, runs tests, stops app):
 ```bash
-./gradlew bootRun
+./run-e2e-tests.sh
 ```
 
-3. Run the tests:
+Or manually:
 ```bash
+./gradlew bootRun &
 newman run postman/Promotions_API.postman_collection.json
 ```
 

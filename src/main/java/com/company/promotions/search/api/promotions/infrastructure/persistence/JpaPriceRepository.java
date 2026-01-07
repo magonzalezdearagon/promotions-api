@@ -9,8 +9,6 @@ import java.util.List;
 
 public interface JpaPriceRepository extends JpaRepository<PriceEntity, Long> {
 
-    List<PriceEntity> findByProductIdAndBrandId(Long productId, Long brandId);
-
     @Query("""
         SELECT p FROM PriceEntity p
         WHERE p.productId = :productId

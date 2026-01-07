@@ -15,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -87,77 +86,68 @@ class PriceRepositoryImplIT {
     }
 
     @Test
-    @DisplayName("Test 1: Request at 10:00 on day 14 for product 35455, brand 1 (ZARA)")
+    @DisplayName("Test 1: Request at 10:00 on day 14 - returns base price (only applicable)")
     void shouldReturnBasePriceAt10OnDay14() {
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 10, 0, 0);
 
-        Optional<Price> result = priceRepository.findApplicablePrice(
+        List<Price> result = priceRepository.findApplicablePrices(
                 ProductId.of(35455L), BrandId.of(1L), applicationDate);
 
-        assertThat(result).isPresent();
-        assertThat(result.get().getPriceListId().value()).isEqualTo(1L);
-        assertThat(result.get().getMoney().amount()).isEqualByComparingTo(new BigDecimal("35.50"));
+        assertThat(result).hasSize(1);
+        assertThat(result.get(0).getPriceListId().value()).isEqualTo(1L);
+        assertThat(result.get(0).getMoney().amount()).isEqualByComparingTo(new BigDecimal("35.50"));
     }
 
     @Test
-    @DisplayName("Test 2: Request at 16:00 on day 14 for product 35455, brand 1 (ZARA)")
-    void shouldReturnPromotionalPriceAt16OnDay14() {
+    @DisplayName("Test 2: Request at 16:00 on day 14 - returns promotional price first (higher priority)")
+    void shouldReturnPromotionalPriceFirstAt16OnDay14() {
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 16, 0, 0);
 
-        Optional<Price> result = priceRepository.findApplicablePrice(
+        List<Price> result = priceRepository.findApplicablePrices(
                 ProductId.of(35455L), BrandId.of(1L), applicationDate);
 
-        assertThat(result).isPresent();
-        assertThat(result.get().getPriceListId().value()).isEqualTo(2L);
-        assertThat(result.get().getMoney().amount()).isEqualByComparingTo(new BigDecimal("25.45"));
+        assertThat(result).hasSize(2);
+        assertThat(result.get(0).getPriceListId().value()).isEqualTo(2L);
+        assertThat(result.get(0).getMoney().amount()).isEqualByComparingTo(new BigDecimal("25.45"));
     }
 
     @Test
-    @DisplayName("Test 3: Request at 21:00 on day 14 for product 35455, brand 1 (ZARA)")
+    @DisplayName("Test 3: Request at 21:00 on day 14 - returns base price (only applicable)")
     void shouldReturnBasePriceAt21OnDay14() {
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 21, 0, 0);
 
-        Optional<Price> result = priceRepository.findApplicablePrice(
+        List<Price> result = priceRepository.findApplicablePrices(
                 ProductId.of(35455L), BrandId.of(1L), applicationDate);
 
-        assertThat(result).isPresent();
-        assertThat(result.get().getPriceListId().value()).isEqualTo(1L);
-        assertThat(result.get().getMoney().amount()).isEqualByComparingTo(new BigDecimal("35.50"));
+        assertThat(result).hasSize(1);
+        assertThat(result.get(0).getPriceListId().value()).isEqualTo(1L);
+        assertThat(result.get(0).getMoney().amount()).isEqualByComparingTo(new BigDecimal("35.50"));
     }
 
     @Test
-    @DisplayName("Test 4: Request at 10:00 on day 15 for product 35455, brand 1 (ZARA)")
-    void shouldReturnPromotionalPriceAt10OnDay15() {
+    @DisplayName("Test 4: Request at 10:00 on day 15 - returns promotional price first (higher priority)")
+    void shouldReturnPromotionalPriceFirstAt10OnDay15() {
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 15, 10, 0, 0);
 
-        Optional<Price> result = priceRepository.findApplicablePrice(
+        List<Price> result = priceRepository.findApplicablePrices(
                 ProductId.of(35455L), BrandId.of(1L), applicationDate);
 
-        assertThat(result).isPresent();
-        assertThat(result.get().getPriceListId().value()).isEqualTo(3L);
-        assertThat(result.get().getMoney().amount()).isEqualByComparingTo(new BigDecimal("30.50"));
+        assertThat(result).hasSize(2);
+        assertThat(result.get(0).getPriceListId().value()).isEqualTo(3L);
+        assertThat(result.get(0).getMoney().amount()).isEqualByComparingTo(new BigDecimal("30.50"));
     }
 
     @Test
-    @DisplayName("Test 5: Request at 21:00 on day 16 for product 35455, brand 1 (ZARA)")
-    void shouldReturnLatePriceAt21OnDay16() {
+    @DisplayName("Test 5: Request at 21:00 on day 16 - returns late promotional price first (higher priority)")
+    void shouldReturnLatePriceFirstAt21OnDay16() {
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 16, 21, 0, 0);
 
-        Optional<Price> result = priceRepository.findApplicablePrice(
+        List<Price> result = priceRepository.findApplicablePrices(
                 ProductId.of(35455L), BrandId.of(1L), applicationDate);
 
-        assertThat(result).isPresent();
-        assertThat(result.get().getPriceListId().value()).isEqualTo(4L);
-        assertThat(result.get().getMoney().amount()).isEqualByComparingTo(new BigDecimal("38.95"));
-    }
-
-    @Test
-    @DisplayName("Should return all prices for a product and brand")
-    void shouldReturnAllPricesForProductAndBrand() {
-        List<Price> result = priceRepository.findByProductIdAndBrandId(
-                ProductId.of(35455L), BrandId.of(1L));
-
-        assertThat(result).hasSize(4);
+        assertThat(result).hasSize(2);
+        assertThat(result.get(0).getPriceListId().value()).isEqualTo(4L);
+        assertThat(result.get(0).getMoney().amount()).isEqualByComparingTo(new BigDecimal("38.95"));
     }
 
     @Test
@@ -165,7 +155,7 @@ class PriceRepositoryImplIT {
     void shouldReturnEmptyWhenNoPriceApplies() {
         LocalDateTime applicationDate = LocalDateTime.of(2019, 1, 1, 10, 0, 0);
 
-        Optional<Price> result = priceRepository.findApplicablePrice(
+        List<Price> result = priceRepository.findApplicablePrices(
                 ProductId.of(35455L), BrandId.of(1L), applicationDate);
 
         assertThat(result).isEmpty();
@@ -176,7 +166,7 @@ class PriceRepositoryImplIT {
     void shouldReturnEmptyForNonExistentProduct() {
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 10, 0, 0);
 
-        Optional<Price> result = priceRepository.findApplicablePrice(
+        List<Price> result = priceRepository.findApplicablePrices(
                 ProductId.of(99999L), BrandId.of(1L), applicationDate);
 
         assertThat(result).isEmpty();

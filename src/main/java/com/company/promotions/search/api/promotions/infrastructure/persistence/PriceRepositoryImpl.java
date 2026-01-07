@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public class PriceRepositoryImpl implements PriceRepository {
@@ -20,26 +19,10 @@ public class PriceRepositoryImpl implements PriceRepository {
     }
 
     @Override
-    public List<Price> findByProductIdAndBrandId(ProductId productId, BrandId brandId) {
-        return jpaPriceRepository.findByProductIdAndBrandId(productId.value(), brandId.value())
-                .stream()
-                .map(PriceEntity::toDomain)
-                .toList();
-    }
-
-    @Override
     public List<Price> findApplicablePrices(ProductId productId, BrandId brandId, LocalDateTime applicationDate) {
         return jpaPriceRepository.findApplicablePrices(productId.value(), brandId.value(), applicationDate)
                 .stream()
                 .map(PriceEntity::toDomain)
                 .toList();
-    }
-
-    @Override
-    public Optional<Price> findApplicablePrice(ProductId productId, BrandId brandId, LocalDateTime applicationDate) {
-        return jpaPriceRepository.findApplicablePrices(productId.value(), brandId.value(), applicationDate)
-                .stream()
-                .findFirst()
-                .map(PriceEntity::toDomain);
     }
 }
