@@ -116,6 +116,7 @@ application-local.properties
 /coverage/
 *.exec
 jacoco.exec
+postman/reports/
 
 # ========================
 # Temporary files
